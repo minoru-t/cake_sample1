@@ -1,4 +1,9 @@
 /vendor/*
+/config/env/*
 /config/app.php
+/config/app_*
 /tmp/*
 /logs/*
+/.vagrant/
+Vagrantfile
+/dev_work/*

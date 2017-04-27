@@ -64,6 +64,10 @@ use Cake\Network\Request;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
 
+// 環境種別情報を読み込み
+require_once APP . 'Utility' . DS . 'CakeEnv.php';
+$env = CakeEnv::load();
+
 /*
  * Read configuration file and inject configuration into various
  * CakePHP classes.
@@ -85,6 +89,7 @@ try {
  * shared configuration.
  */
 //Configure::load('app_local', 'default');
+Configure::load("app_{$env}", 'default');
 
 /*
  * When debug = true the metadata cache should only last
